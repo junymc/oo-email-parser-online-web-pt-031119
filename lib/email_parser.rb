@@ -20,11 +20,17 @@ class EmailParser
     # email_array.uniq
 
     #second way if I make it simpler
-    email_array << @emails.split(/[,\s]/)
-    email_array.flatten.delete_if {|email| email == ""}.uniq
+    # email_array << @emails.split(/[,\s]/)
+    # email_array.flatten.delete_if {|email| email == ""}.uniq
+
+    #third way that I passed the test with
     # email_array = @emails.split(/[,\s]/)
     # email_array = email_array.reject {|email| email == ""}
     # email_array.uniq
+
+    #fourth way that classmate passed the test with(the simplest way)
+    email_array << @emails.split(/[,\s]+/)
+    email_array.uniq
   end
 
 end
