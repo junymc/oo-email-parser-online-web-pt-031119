@@ -13,22 +13,22 @@ class EmailParser
 
   def parse
     email_array = []
-    #first way I tried
+    #first way I tried => still complecated
     # email_array << @emails.split(/[,\s]/)
     # email_array = email_array.flatten
     # email_array.delete("")
     # email_array.uniq
 
-    #second way if I make it simpler
+    #second way if I make it simpler => much better!
     # email_array << @emails.split(/[,\s]/)
     # email_array.flatten.delete_if {|email| email == ""}.uniq
 
-    #third way that I passed the test with
+    #third way that I passed the test with at first => using .reject
     # email_array = @emails.split(/[,\s]/)
     # email_array = email_array.reject {|email| email == ""}
     # email_array.uniq
 
-    #fourth way that classmate passed the test with(the simplest way)
+    #fourth way that classmate passed the test with(the simplest way!)
     email_array = @emails.split(/[,\s]+/).uniq
   end
 
