@@ -30,6 +30,7 @@ class EmailParser
 
     #fourth way that classmate passed the test with(the simplest way!)
     email_array = @emails.split(/[,\s]+/).uniq
+    binding.pry
   end
 
 end
